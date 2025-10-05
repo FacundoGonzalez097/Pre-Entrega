@@ -1,4 +1,8 @@
 /* ======== RESET GENERAL ======== */
+html {
+  font-size: 62.5%; 
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,34 +12,35 @@
 body {
   font-family: 'Saira Condensed', sans-serif;
   margin: 0;
-   
-  font-size: 20px; 
+  font-size: 2rem;
+  background-color: #1a1a1a;
+  color: #ffffff;
 }
 
 /* ======== HEADER Y NAV ======== */
 .header {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.9);  
   padding: 2.5rem 4rem;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 100;
-  height: 70px; 
+  z-index: 100; 
+  height: 7rem;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  height: 10px;           
-  padding: 0 40px;
+  align-items: center; 
+  height: 1rem;  
+  padding: 0 4rem;
 }
 
 .nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
-  gap: 50px;
+  justify-content: center; 
+  gap: 5rem;
   margin: 0;
   padding: 0;
   flex: 1;
@@ -46,21 +51,24 @@ body {
   color: white;
   font-weight: bold;
   transition: color 0.3s ease;
+  font-size: 2.2rem; 
 }
 
 .nav ul li a:hover {
   color: #00bcd4;
 }
+
+
 section[id] {
-  scroll-margin-top: 100px; /* ✅ Ajustá este valor al alto de tu nav */
+  scroll-margin-top: 10rem;
 }
 
-/* Botón “Consulta ahora” */
+
 .nav a[href*="contacto"] {
   background-color: #00bcd4;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 8px;
+  color: white; 
+  padding: 1rem 1.8rem; 
+  border-radius: 0.8rem;
   text-decoration: none;
   font-weight: bold;
   transition: background 0.3s ease;
@@ -70,7 +78,7 @@ section[id] {
   background-color: #008c9e;
 }
 
-/* ======== CUERPO (HERO) ======== */
+
 .cuerpo {
   background: url('../imagenes/abogado.png') center/cover no-repeat;
   min-height: 90vh;
@@ -80,7 +88,7 @@ section[id] {
   text-align: center;
   color: white;
   position: relative;
-  margin-top: 80px; /* espacio por el header fijo */
+  margin-top: 0; 
 }
 
 .cuerpo::before {
@@ -90,7 +98,7 @@ section[id] {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6); /* transparencia */
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .cuerpo-texto {
@@ -104,13 +112,15 @@ section[id] {
 }
 
 .cuerpo-texto p {
-  font-size: 1.1rem;
+  font-size: 1.8rem; 
 }
 
 /* ======== SERVICIOS ======== */
 .productos-home {
   padding: 4rem 2rem;
   text-align: center;
+  background-color: #ffffff;
+  color: #1a1a1a;
 }
 
 .contenedor-servicios {
@@ -122,22 +132,20 @@ section[id] {
 }
 
 .tarjeta-servicio {
-  border: 1px solid #ddd;
+  border: 0.1rem solid #ddd;
   padding: 1.5rem;
-  border-radius: 10px;
-  width: 250px;
+  border-radius: 1rem;
+  width: 25rem;
   background-color: #fafafa;
   transition: transform 0.3s ease;
 }
 
-.tarjeta-servicio:hover {
-  transform: translateY(-5px);
-}
-
 /* ======== QUIÉN SOY ======== */
 .quien-soy {
+  background-color: #ffffff; 
   padding: 4rem 2rem;
   text-align: center;
+  color: #1a1a1a; /
 }
 
 .perfil {
@@ -150,13 +158,13 @@ section[id] {
 }
 
 .perfil img {
-  width: 250px;
-  border-radius: 10px;
+  width: 25rem;
+  border-radius: 1rem;
 }
 
 /* ======== BENEFICIOS ======== */
 .beneficios {
-  background-color: #f5f5f5;
+  background-color: #111;
   padding: 4rem 2rem;
   text-align: center;
 }
@@ -168,7 +176,7 @@ section[id] {
 
 .beneficios li {
   margin-bottom: 0.8rem;
-  font-size: 1.1rem;
+  font-size: 1.6rem; 
 }
 
 /* ======== FOOTER ======== */
@@ -180,4 +188,145 @@ section[id] {
   position: relative;
   bottom: 0;
   width: 100%;
+}
+
+/* --- ESTILOS ESPECÍFICOS DE LA SECCIÓN CONTACTO --- */
+.contacto {
+  padding: 8rem 2rem;
+  text-align: center;
+}
+
+.contacto h2 {
+  font-size: 2.5em; 
+  font-weight: 700;
+  margin-bottom: 4rem;
+  color: #00bcd4;
+}
+
+/* --- ESTILO DEL FORMULARIO --- */
+.contacto form {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 3rem;
+  background-color: #2c2c2c;
+  border-radius: 0.8rem;
+  box-shadow: 0 0.4rem 1.5rem rgba(0, 0, 0, 0.4);
+  text-align: left;
+}
+
+.contacto label {
+  display: block; 
+  margin-bottom: 2rem;
+  font-size: 1.5rem; 
+  font-weight: 400;
+}
+
+/* --- ESTILO DE CAMPOS DE ENTRADA (Input y Textarea) --- */
+.contacto input[type="email"],
+.contacto textarea {
+  width: 100%; 
+  padding: 1.2rem;
+  margin-top: 0.8rem;
+  border: 0.1rem solid #555;  
+  border-radius: 0.4rem;
+  background-color: #3a3a3a;
+  color: #ffffff;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.contacto textarea {
+  resize: vertical;
+  min-height: 15rem;
+}
+
+/* --- ESTILO DEL BOTÓN --- */
+.contacto button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+  background-color: #00bcd4;
+  color: #1a1a1a;
+  border: none; 
+  border-radius: 0.4rem;
+  cursor: pointer; 
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-top: 3rem;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.contacto button[type="submit"]:hover {
+  background-color: #00a4b8;
+  transform: translateY(-0.2rem);
+}
+
+/* =====  Media query: pantallas chicas ===== */
+@media (max-width: 76.8rem) {
+  
+  /* --- AJUSTES GENERALES DEL HEADER --- */
+  .header {
+    padding: 1.5rem 2rem; 
+    height: auto; 
+  }
+
+  /* --- AJUSTES DE NAVEGACIÓN (.nav) --- */
+  .nav {
+    flex-direction: column;
+    padding: 0; 
+    height: auto; 
+  }
+
+  /* Menú vertical: Apila los links */
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem; 
+    margin: 1rem 0; 
+  }
+  
+  .nav a[href*="contacto"] {
+    width: 100%;
+    text-align: center;
+    margin-top: 1.5rem;
+    padding: 1.2rem 1.8rem;
+  }
+  
+  /* --- AJUSTES SECCIÓN PRINCIPAL (.cuerpo) --- */
+  .cuerpo {
+    padding: 0 2rem; 
+    min-height: 50vh; 
+  }
+
+  .cuerpo-texto h1 {
+    font-size: 3.2rem; 
+  }
+  
+  /* --- AJUSTES SERVICIOS --- */
+  .contenedor-servicios {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .tarjeta-servicio {
+    width: 90%; 
+    margin: 0 auto; 
+  }
+
+  /* --- AJUSTES QUIÉN SOY (.perfil) --- */
+  .perfil {
+    flex-direction: column;
+  }
+
+  .perfil img {
+    width: 60%;
+    max-width: 30rem;
+  }
+  
+  /* --- AJUSTES FOOTER --- */
+  .footer {
+   
+    padding: 1.5rem 1rem;
+    font-size: 1.4rem; 
+  }
 }
